@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bella Nails Studio - Nail Art de Luxo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200;300;400;500;600;700&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200;300;400;500;600&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -233,7 +233,7 @@
             width: 100%;
             height: 100%;
             background-image: url('clinic.jpeg');
-            background-size: contain;
+            background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             z-index: 0;
@@ -253,38 +253,28 @@
 
         @media (max-width: 1400px) {
             .hero::before {
-                background-size: contain;
+                background-size: cover;
                 background-position: center center;
             }
         }
 
         @media (max-width: 1024px) {
             .hero::before {
-                background-size: contain;
-                background-position: center center;
+                background-size: cover;
+                background-position: 40% center;
             }
         }
 
         @media (max-width: 768px) {
             .hero::before {
-                width: 100vh;
-                height: 100vw;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(-90deg);
-                background-size: contain;
+                background-size: auto 100%;
                 background-position: center center;
             }
         }
 
         @media (max-width: 480px) {
             .hero::before {
-                width: 100vh;
-                height: 100vw;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(-90deg);
-                background-size: contain;
+                background-size: auto 110%;
                 background-position: center center;
             }
         }
@@ -364,9 +354,9 @@
         }
 
         .hero-cta {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(64, 153, 226, 0.25);
             color: #144dc7;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(64, 153, 226, 0.4);
             padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
             font-family: 'Inter', sans-serif;
             font-size: clamp(0.8rem, 1.8vw, 0.9rem);
@@ -375,28 +365,34 @@
             cursor: pointer;
             transition: all 0.3s ease;
             border-radius: 2px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             text-decoration: none;
             display: inline-block;
             animation: buttonGlow 3s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(64, 153, 226, 0.3), inset 0 0 15px rgba(135, 206, 250, 0.2);
         }
 
         @keyframes buttonGlow {
             0%, 100% {
-                box-shadow: 0 0 15px rgba(135, 206, 250, 0.4);
+                box-shadow: 0 0 20px rgba(64, 153, 226, 0.4), inset 0 0 15px rgba(135, 206, 250, 0.2);
             }
             50% {
-                box-shadow: 0 0 25px rgba(135, 206, 250, 0.6);
+                box-shadow: 0 0 30px rgba(64, 153, 226, 0.6), inset 0 0 20px rgba(135, 206, 250, 0.3);
             }
         }
 
         .hero-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(250, 191, 135, 0.5);
-            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(64, 153, 226, 0.5), inset 0 0 20px rgba(135, 206, 250, 0.3);
+            background: rgba(64, 153, 226, 0.35);
         }
 
         @media (max-width: 768px) {
+            .hero h1 {
+                font-weight: 500;
+            }
+
             .hero-content {
                 top: 100px;
                 left: 30px;
@@ -404,23 +400,14 @@
                 max-width: calc(100% - 60px);
             }
 
-            .hero h1 {
-                font-weight: 600;
-            }
-
             .hero-cta-group {
-                position: absolute;
-                bottom: auto;
-                top: 380px;
-                left: 30px;
+                position: static;
+                margin-top: 2rem;
             }
 
             .hero-cta {
                 padding: 1.2rem 2.5rem;
                 font-size: 1rem;
-                background: rgba(100, 150, 255, 0.15);
-                box-shadow: 0 0 30px rgba(64, 153, 226, 0.6), 0 0 50px rgba(135, 206, 250, 0.4);
-                border: 1px solid rgba(100, 150, 255, 0.3);
             }
 
             .hero {
@@ -743,9 +730,9 @@
             </div>
             <h1>A Excelência em Saúde</h1>
             <p class="hero-subtitle">Uma clínica médica que une profissionais altamente qualificados, tecnologia avançada e atendimento premium em cada detalhe.</p>
-        </div>
-        <div class="hero-cta-group">
-            <a href="https://wa.me/5511996543210?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20no%20Bella%20Nails%20Studio." target="_blank" class="hero-cta">Contatar via WhatsApp</a>
+            <div class="hero-cta-group">
+                <a href="https://wa.me/5511996543210?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20no%20Bella%20Nails%20Studio." target="_blank" class="hero-cta">Contatar via WhatsApp</a>
+            </div>
         </div>
     </section>
 
