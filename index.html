@@ -338,7 +338,7 @@
         .hero-subtitle {
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             color: #393b3d;
-            margin-bottom: clamp(2rem, 4vw, 3rem);
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
             font-weight: 300;
             letter-spacing: 0.5px;
             max-width: 600px;
@@ -346,20 +346,13 @@
             display: inline-block;
         }
 
-        .hero-cta-group {
-            position: absolute;
-            bottom: 30px;
-            left: 60px;
-            z-index: 2;
-        }
-
         .hero-cta {
             background: rgba(64, 153, 226, 0.25);
             color: #144dc7;
             border: 1px solid rgba(64, 153, 226, 0.4);
-            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+            padding: 1rem 2rem;
             font-family: 'Inter', sans-serif;
-            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            font-size: 0.9rem;
             font-weight: 400;
             letter-spacing: 0.5px;
             cursor: pointer;
@@ -401,14 +394,9 @@
                 max-width: calc(100% - 60px);
             }
 
-            .hero-cta-group {
-                position: static;
-                margin-top: 2rem;
-            }
-
             .hero-cta {
-                padding: 1.2rem 2.5rem;
-                font-size: 1rem;
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
             }
 
             .hero {
@@ -731,8 +719,6 @@
             </div>
             <h1>A Excelência em Saúde</h1>
             <p class="hero-subtitle">Uma clínica médica que une profissionais altamente qualificados, tecnologia avançada e atendimento premium em cada detalhe.</p>
-        </div>
-        <div class="hero-cta-group">
             <a href="https://wa.me/5511996543210?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20no%20Bella%20Nails%20Studio." target="_blank" class="hero-cta">Contatar via WhatsApp</a>
         </div>
     </section>
@@ -1005,7 +991,7 @@
                 const targetSection = document.querySelector(targetId);
                 
                 if (targetSection) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
+                const headerHeight = document.querySelector('header').offsetHeight;
                     const targetPosition = targetSection.offsetTop - headerHeight;
 
                     window.scrollTo({
